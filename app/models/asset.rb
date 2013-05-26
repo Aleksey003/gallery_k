@@ -11,10 +11,9 @@ class Asset < ActiveRecord::Base
     :path => proc { |style| "k_img/#{style}/#{id}_#{data.original_filename}" }
     }
 
-	before_save :set_title_from_file_name
+  before_save :default_title
 
   include Rails.application.routes.url_helpers
-
 
   def to_jq_upload
     {
@@ -26,9 +25,9 @@ class Asset < ActiveRecord::Base
     }
   end
 
-	private
-	def set_title_from_file_name
-		title = read_attribute(:data_file_name)
-	end
+  private
+  def default_title
+    self.title =  File.basename(data_file_name, '.*')
+  end
 
 end

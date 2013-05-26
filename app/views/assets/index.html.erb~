@@ -8,7 +8,7 @@
     <th></th>
     <th></th>
   </tr>
-
+<div class="yoxview">
 <% @assets.each do |asset| %>
   <tr>
     <td><%= asset.title %></td>
