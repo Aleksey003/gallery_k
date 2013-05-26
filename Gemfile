@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
+gem 'devise'
+
 gem "will_paginate", "~> 3.0.4"
 gem "paperclip", "~> 3.0"
 gem 'paperclip-dropbox'

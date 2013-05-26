@@ -6,7 +6,7 @@
     <%= link_to image_tag(asset.data.url(:medium)), asset.data.url(:original), :data => {:gallery => 'gallery'}, :title => asset.title %>
      
     
-    <% if true %>
+    <% if user_signed_in? %>
     
     <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_asset_path(asset) %>
     <%= link_to '<i class="icon-remove"></i>'.html_safe, asset, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -30,7 +30,7 @@
 
 
 <br />
-
+   <% if user_signed_in? %>
 <%= link_to 'New Asset', new_asset_path %>
 <%= form_for Asset.new , :url => { :controller => "assets", :action => "index"},:html => { :multipart => true, :id => "fileupload"  } do |f| %>
 <div class="row fileupload-buttonbar">
@@ -164,3 +164,4 @@
 
   });
 </script>
+<% end %>
