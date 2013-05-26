@@ -3,8 +3,8 @@ class Asset < ActiveRecord::Base
   attr_accessible :data, :title
   has_attached_file :data,
   	:styles => {
-    :medium => "300x300>",
-    :thumb => "50x50>"},
+    :medium => "300x300>"
+    },
     :storage => :dropbox,
     :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
     :dropbox_options => {

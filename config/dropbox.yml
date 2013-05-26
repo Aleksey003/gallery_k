@@ -1,6 +1,16 @@
-app_key: "r6egu9kpus76x5e"
-app_secret: "9j4ghsv4hcmr2u8"
-access_token: "yyv303nl4yu8atj"
-access_token_secret: "vi3rale4afdgm2s"
-user_id: "175139498"
-access_type: "app_folder"
+production:
+  app_key: "pjljsm3b2pj91sy"
+  app_secret: "fntx5k3xjecsym6"
+  access_token: "yyz0gvb3oqjc62a"
+  access_token_secret: "uf09a93ej0ki4bo"
+  user_id: "176619603"
+  access_type: "app_folder"
+development:
+ app_key: "r6egu9kpus76x5e"
+ app_secret: "9j4ghsv4hcmr2u8"
+ access_token: "yyv303nl4yu8atj"
+ access_token_secret: "vi3rale4afdgm2s"
+ user_id: "175139498"
+ access_type: "app_folder"
+
+
