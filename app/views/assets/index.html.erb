@@ -28,7 +28,7 @@
     </div>
 </div>
 
-
+<%= will_paginate @posts %>
 <br />
    <% if user_signed_in? %>
 <%= link_to 'New Asset', new_asset_path %>

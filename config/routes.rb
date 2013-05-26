@@ -3,6 +3,8 @@ Gallery::Application.routes.draw do
       get "/login" => "devise/sessions#new"
       get "logout" => "devise/sessions#destroy"    
     end
+    devise_for :users, :controllers => {:sessions => "sessions"}
+    resources :users
 
   resources :assets
   root :to => 'assets#index'
